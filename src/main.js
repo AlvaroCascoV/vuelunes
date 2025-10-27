@@ -5,14 +5,12 @@ import router from './Router.js'
 let app = createApp(App)
 
 app.config.globalProperties.$filters = {
-    parImpar(numero) {
-        let dibujo = "";
-        if (numero % 2 == 0) {
-            dibujo = "<span style='color:green'>Par</span>"
+    evaluarNumero(num) {
+        if (num % 2 == 0) {
+            return "<span style='color:green'>" + num + "</span>"
         } else {
-            dibujo = "<span style='color:red'>Impar</span>"
+            return "<span style='color:red'>" + num + "</span>"
         }
-        return dibujo;
     }
 }
 
