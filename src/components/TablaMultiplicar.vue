@@ -4,7 +4,7 @@
 	<input type="number" v-model="numero" />
 	<button v-on:click="generarTabla()">Generar Tabla</button>
 	<div id="contenedor">
-		<table border="1" id="tablametodo">
+		<table border="1" id="tablametodo" style="background-color: lightcoral">
 			<thead>
 				<tr>
 					<th>OperacionM</th>
@@ -13,7 +13,7 @@
 			</thead>
 			<tbody v-html="tabla"></tbody>
 		</table>
-		<table border="1" id="tabladirectivas">
+		<table border="1" id="tabladirectivas" style="background-color: lightblue">
 			<thead>
 				<tr>
 					<th>OperacionD</th>
@@ -27,7 +27,7 @@
 				</tr>
 			</tbody>
 		</table>
-		<table border="1" id="tablafilters">
+		<table border="1" id="tablafilters" style="background-color: lightgreen">
 			<thead>
 				<tr>
 					<th>OperacionF</th>
