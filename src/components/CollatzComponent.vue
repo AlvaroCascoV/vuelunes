@@ -1,23 +1,26 @@
 <template>
-	<h1>Collatz</h1>
-	<label>Introduzca Numero:</label>
-	<input type="number" v-model="numero" />
-	<button v-on:click="generarCollatz">Generar Collatz</button>
-	<ul>
-		<li
-			v-for="num in numeroscollatz"
-			:key="num"
-			v-html="$filters.evaluarNumero(num)"
-		></li>
-	</ul>
+	<div>
+		<h1>Collatz</h1>
+		<label>Introduzca número</label>
+		<input type="number" v-model="numero" />
+		<button @click="generarCollatz()">Generar Collatz</button>
+		<ul>
+			<li
+				v-for="num in numerosCollatz"
+				:key="num"
+				v-html="$filters.evaluarNumero(num)"
+			></li>
+		</ul>
+	</div>
 </template>
+
 <script>
 	export default {
 		name: "CollatzComponent",
 		data() {
 			return {
 				numero: 0,
-				numeroscollatz: [],
+				numerosCollatz: [],
 			};
 		},
 		methods: {
@@ -36,9 +39,3 @@
 		},
 	};
 </script>
-
-<style>
-	ul li {
-		display: block;
-	}
-</style>

@@ -8,6 +8,10 @@
 			<router-link to="/collatz">Collatz</router-link>
 			|
 		</li>
+		<li>
+			<router-link to="/tablamultiplicar">Tablas</router-link>
+			|
+		</li>
 	</ul>
 </template>
 <script>
